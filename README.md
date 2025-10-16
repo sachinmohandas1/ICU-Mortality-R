@@ -25,7 +25,7 @@ The project was developed for *MET CS555 – Foundations of Machine Learning* at
 
 ---
 
-## ⚙️ Methods
+## Methods
 
 All modeling was done using **logistic regression** with a 50/50 train-test split. The workflow is twofold:
 
