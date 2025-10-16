@@ -6,9 +6,9 @@
 
 ## Overview
 
-This project investigates whether **ICU patient mortality** can be predicted using a subset of the **MIMIC-III** clinical database. Implemented entirely in **R**, the goal is to identify small ensembles of clinical features that rival or outperform a full-feature logistic regression classifier in accuracy.
+This project investigates whether ICU patient mortality can be predicted using a subset of the MIMIC-III clinical database. Implemented entirely in **R**, the goal is to identify small ensembles of clinical features that rival or outperform a full-feature logistic regression classifier in accuracy.
 
-The project was developed for *MET CS555 – Foundations of Machine Learning* at Boston University. A separate implementation was conducted in **Python** to compare language toolchains and modeling performance.
+The project was developed for MET CS555 – Foundations of Machine Learning at Boston University. A separate implementation was conducted in **Python** to compare language toolchains and modeling performance.
 
 ---
 
@@ -21,7 +21,7 @@ The project was developed for *MET CS555 – Foundations of Machine Learning* at
 - **Preprocessing:**  
   - NAs imputed using column means  
   - ID and grouping columns removed  
-  - Focus on **37 non-categorical variables** for feature ensemble analysis  
+  - Focus on 37 non-categorical variables for feature ensemble analysis  
 
 ---
 
@@ -34,7 +34,7 @@ All modeling was done using **logistic regression** with a 50/50 train-test spli
    - Achieved **85.7% accuracy**  
 
 2. **Feature Ensemble Search**
-   - Analyzed **all 7,770 unique 3-feature combinations**
+   - Analyzed all 7,770 unique 3-feature combinations
    - Measured predictive accuracy for each mini-model  
    - Identified top-performing combinations and conducted statistical comparisons
 
@@ -64,18 +64,18 @@ All modeling was done using **logistic regression** with a 50/50 train-test spli
 
 - **Pairplots** were generated for the top 50 ensembles to visualize class separation.
 - **Collinearity analysis** showed:
-  - Mean collinearity for all ensembles: **0.0052**
-  - Mean for top 50 ensembles: **0.0312**
-  - **t-test p-value**: 0.455 → no statistically significant difference
+  - Mean collinearity for all ensembles: 0.0052
+  - Mean for top 50 ensembles: 0.0312
+  - t-test p-value: 0.455 → no statistically significant difference
 - While collinearity wasn’t a driving factor, certain features showed strong influence on outcome prediction.
 
 ---
 
 ## Interpretation
 
-- Smaller feature ensembles can **outperform** the full model without sacrificing much accuracy.  
-- This suggests robust predictors exist among a limited subset of features — valuable when only partial patient data is available.  
-- However, **clinical interpretability** and real-world uncertainty limit deployment without further refinement.
+- Smaller feature ensembles can outperform the full model without sacrificing much accuracy.  
+- This suggests robust predictors exist among a limited subset of features - valuable when only partial patient data is available.  
+- However, clinical interpretability and real-world uncertainty limit deployment without further refinement.
 
 ---
 
